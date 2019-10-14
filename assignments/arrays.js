@@ -444,5 +444,15 @@ console.log(extractOldCars(inventory));
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. 
 // Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array,
 //  use JSON.stringify() to show the results of the array in the console.
-let BMWAndAudi = [];
-console.log();
+
+function extractAudiandBMW(array){
+  let BMWAndAudi = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].car_make === "Audi" ||array[i].car_make === "BMW" ){
+      BMWAndAudi.push(array[i].car_make + array[i].car_model  + array[i].car_year);
+    }
+  }
+  return BMWAndAudi;
+}
+console.log(extractAudiandBMW(inventory));
+
