@@ -428,8 +428,17 @@ console.log(extractYears(inventory));
 // The car lot manager needs to find out how many cars are older than the year 2000. 
 // Using the carYears array you just created, find out how many cars were made before the year 2000 
 // by populating the array oldCars and logging it's length.
-let oldCars = [];
-console.log();
+
+function extractOldCars(array){
+  let oldCars = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].car_year <= 2000){
+      oldCars.push(array[i].car_year);
+    }
+ }
+return oldCars;
+}
+console.log(extractOldCars(inventory));
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. 
