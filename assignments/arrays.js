@@ -374,16 +374,6 @@ console.log(`${lastCar.car_make}  ${lastCar.car_model}`);
 // console.log(carModels);
 
 
-function extractCarModels(array) {
-  let carModels = [];
-  for (let i = 0; i < array.length; i++) {
-     carModels.push(array[i].car_model);
-  }
-  return carModels.sort();
-  // console.log(carModels);
-
-}
-console.log(extractCarModels(inventory));
 
 
 // console.log(carModels);
@@ -391,31 +381,48 @@ console.log(extractCarModels(inventory));
 
 // Old workings
 // carModels = carModels + Object.values(inventory)[2];
-    // console.log(carModels);
-    // return carModels;
-    // console.log(inventory[i]);
+// console.log(carModels);
+// return carModels;
+// console.log(inventory[i]);
 
 // function extractCarModels(array, objectMethod){
-//     let carModels = [];
-//     let carModelsSorted = [];
-//     for (let i = 0; i < inventory.length -1; i++) {
-//       carModels = carModels + objectMethod;
-//       return carModels;
-
-// carModels = carModels + inventory[i];
-// console.log("a" + carModels);
-// return carModels;
-//     }
-//     console.log("a" + carModels);
-
-//   }
-// extractCarModels(inventory, Object.values(inventory[2]));
+  //     let carModels = [];
+  //     let carModelsSorted = [];
+  //     for (let i = 0; i < inventory.length -1; i++) {
+    //       carModels = carModels + objectMethod;
+    //       return carModels;
+    
+    // carModels = carModels + inventory[i];
+    // console.log("a" + carModels);
+    // return carModels;
+    //     }
+    //     console.log("a" + carModels);
+    
+    //   }
+    // extractCarModels(inventory, Object.values(inventory[2]));
+        function extractCarModels(array) {
+          let carModels = [];
+          for (let i = 0; i < array.length; i++) {
+             carModels.push(array[i].car_model);
+          }
+          return carModels.sort();
+          // console.log(carModels);
+        
+        }
+        console.log(extractCarModels(inventory));
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot.
 //  Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = [];
-console.log();
+function extractYears(array){
+  let carYears = [];
+  for (let i = 0; i < array.length; i++) {
+    carYears.push(array[i].car_year);
+ }
+return carYears;
+}
+
+console.log(extractYears(inventory));
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. 
